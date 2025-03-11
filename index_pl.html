@@ -15,6 +15,7 @@
 
 <body>
     <section class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <div class="navbarbox">
             <a href="#about-me" class="navbar-link">O mnie</a>
             <a href="#requests" class="navbar-link">Tematy wróżb</a>
@@ -42,6 +43,33 @@
                 </div>
             </div>
         </div>
+        <!-- Wysuwane menu mobilne -->
+        <div id="mobile-menu">
+            <a href="#about-me" class="navbar-link">O mnie</a>
+            <a href="#requests" class="navbar-link">Tematy wróżb</a>
+            <a href="#price" class="navbar-link">Cennik</a>
+            <a href="#contacts" class="navbar-link">Kontakt</a>
+            <div class="socialbox">
+                <a href="https://www.instagram.com/alyo.nataro" target="_blank">
+                    <img src="img/insta.png" alt="Instagram" class="social-logo">
+                </a>
+                <a href="https://t.me/tarolog_aliona" target="_blank">
+                    <img src="img/telegram.svg" alt="telegram" class="social-logo">
+                </a>
+                <a href="https://r.mssg.me/m/6778fa8d7d65130bed5d98f2" target="_blank">
+                    <img src="img/viber.svg" alt="viber" class="social-logo">
+                </a>
+                <a href="https://r.mssg.me/m/6778fa8d7d65130bed5d98f2" target="_blank">
+                    <img src="img/whatsapp.svg" alt="whatsup" class="social-logo">
+                </a>
+            </div>
+            <div class="language-menu">
+                <p class="language-title">▼ Język</p>
+                <div class="language-dropdown">
+                    <a href="index_ua.html">Українська</a>
+                    <a href="index_pl.html">Polski</a>
+                </div>
+            </div>
     </section>
     <section id="hellopage" class="hellopage">
         <div class="hellotextbox">
@@ -170,7 +198,16 @@
         </div>
     </section>
 
-
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("mobile-menu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+</script>
 </body>
 
 </html>
