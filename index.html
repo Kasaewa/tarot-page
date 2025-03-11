@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirection</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let userLang = navigator.language || navigator.userLanguage;
+
+            if (userLang.startsWith("pl")) {
+                window.location.href = "index_pl.html";
+            } else if (userLang.startsWith("uk")) {
+                window.location.href = "index_ua.html";
+            } else {
+                window.location.href = "index_pl.html"; // Domyślnie polska wersja
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>Przekierowanie do odpowiedniej wersji językowej...</p>
+</body>
+
+</html>
